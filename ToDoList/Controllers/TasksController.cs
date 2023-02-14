@@ -23,5 +23,11 @@ namespace ToDoList.Controllers
       Task myTask = new Task(description);
       return RedirectToAction("Display");
     }
+    [HttpPost("/tasks/delete")]
+    public ActionResult DeleteAll()
+    {
+      Task.ClearAll();
+      return RedirectToAction("Display");
+    }
   }
 }
