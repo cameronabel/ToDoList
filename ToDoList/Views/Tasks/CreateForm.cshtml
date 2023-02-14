@@ -10,9 +10,10 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h1>Welcome to the To Do List!</h1>
-    <a href='/tasks/new'>Add a new task</a>
-    <br>
-    <a href='/tasks'>See list of tasks</a>
+    <form action="/tasks" method="post">
+      <label for="description">Add a new task</label>
+      <input id="description" name="description" type="text">
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
